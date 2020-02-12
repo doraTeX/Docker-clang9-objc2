@@ -16,6 +16,9 @@ function test_command () {
   return ${RESULT}
 }
 
+CWD=$(dirname "$0")
+cd "${CWD}"
+
 ( cd test/blocks
   rm -rf a.out
   test_command clang-objc blocktest.m \

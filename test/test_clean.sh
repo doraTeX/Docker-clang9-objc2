@@ -1,5 +1,8 @@
 #/bin/bash
 
+CWD=$(dirname "$0")
+cd "${CWD}"
+
 ( cd test/blocks
   rm -rf a.out *.d
 )
